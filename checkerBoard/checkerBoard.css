@@ -1,27 +1,28 @@
-table {
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+.checker-container {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
 }
-td {
+.div-container div {
   width: 100px;
   height: 100px;
 }
-/* tr {
-  width: 100%;
-  height: 100%;
-} */
 
-/* Every child of TD that is of an even number will be black */
-td:nth-child(even) {
-  background-color: black;
-}
-
-/* Since we need the white and black to be alternating, We need every even child of TD that is an even child of TR to be white
-to create an alternating black & white effect instead of just black pillars */
-tr:nth-child(even) td:nth-child(even) {
+.white {
   background-color: white;
 }
-
-tr:nth-child(even) td:nth-child(odd) {
+.black {
   background-color: black;
 }
