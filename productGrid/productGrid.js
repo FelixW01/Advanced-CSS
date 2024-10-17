@@ -6,26 +6,39 @@ const products = [
   image: "https://via.placeholder.com/150",
   alt: "an image of a cat in a bat costume",
   description: "Pet Cat Bat Wings for Halloween Party Decoration, cute Cat Dress Up Accessories"
+}, {
+  title: "Product 2",
+  price: "$6.99",
+  image: "https://via.placeholder.com/150",
+  alt: "an image of a cat in a bat costume",
+  description: "Pet Cat Bat Wings for Halloween Party Decoration, cute Cat Dress Up Accessories"
 },
 ]
 
-function initilizeElements() {
+function initializeElements() {
   // create required elements
-  
+  const cardDiv = document.createElement("div");
+  const cardH2 = document.createElement("h2");
+  const cardP = document.createElement("p");
+  const cardImg = document.createElement("img");
 }
 
 function populateProduct() {
-  let cardTemplate = `
-      <div class="div-container" id="product-div"><div class="div-card">
-        <h2>${products[0].title}</h2>
-        <p>$${products[0].price}</p>
-        <img src="${products[0].image}" alt="${products[0].alt}" />
-        <p>
-        ${products[0].description}
-        </p>
-      </div>`
-  
-      productDiv.
+  initializeElements()
+  for (let i = 0; i < products.length; i++) {
+    let cardTemplate = `
+        <div class="div-container" id="product-div">
+        <div class="div-card">
+          <h2>${products[i].title}</h2>
+          <p>$${products[i].price}</p>
+          <img src="${products[i].image}" alt="${products[i].alt}" />
+          <p>
+          ${products[i].description}
+          </p>
+        </div>`
+
+        productDiv.innerHTML = cardTemplate;
+      }
 }
 
 populateProduct()
