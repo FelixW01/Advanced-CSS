@@ -18,6 +18,7 @@ body {
   grid-template-rows: repeat(8 100px);
   justify-content: center;
   align-items: center;
+  background-color: #f9f9f9;
 }
 .div-container div {
   width: 100px;
