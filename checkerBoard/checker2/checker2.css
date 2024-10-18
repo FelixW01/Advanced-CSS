@@ -1,3 +1,20 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
 td {
   width: 100px;
   height: 100px;
@@ -9,11 +26,40 @@ td:nth-child(even) {
 }
 
 /* Since we need the white and black to be alternating, We need every even child of TD that is an even child of TR to be white
-to create an alternating black & white effect instead of just black pillars */
+to create an alternating black & white effect instead of just black pillars. This basically overwrites the connecting black boxes
+into white boxes*/
 tr:nth-child(even) td:nth-child(even) {
   background-color: white;
 }
 
+/* Every odd TD that's a child of an even TR will be colored black to complete the checkers board.*/
 tr:nth-child(even) td:nth-child(odd) {
   background-color: black;
+}
+
+.nav-container {
+  background-color: #1c1c1c;
+  height: 10%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-div a {
+  text-decoration: none;
+  color: #d3d3d3;
+  padding: 0.2rem;
+}
+
+.nav-div a:hover {
+  background-color: #696969;
+  border-radius: 4px;
 }
