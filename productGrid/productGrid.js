@@ -1,4 +1,5 @@
 const productDiv = document.getElementById("product-div");
+//Array of objects containing the product information
 const products = [
  {
   title: "Cowboy Cat Costume",
@@ -53,6 +54,7 @@ const products = [
 
 ]
 
+// Function to populate product by looping through the length of the products array and dynamically creating elements and adding product information
 function populateProduct() {
   for (let i = 0; i < products.length; i++) {
     let cardTemplate = `
